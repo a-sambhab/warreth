@@ -1,25 +1,27 @@
-import { EthProvider } from "./contexts/EthContext";
-import Intro from "./components/Intro/";
-import Setup from "./components/Setup";
-import Demo from "./components/Demo";
-import Footer from "./components/Footer";
+// import { EthProvider } from "./contexts/EthContext";
+// import Intro from "./components/Intro/";
+// import Setup from "./components/Setup";
+// import Demo from "./components/Demo";
+// import Footer from "./components/Footer";
 import "./App.css";
+import * as Push from "@pushprotocol/restapi";
+import * as ethers from "ethers";
 
 function App() {
   return (
-    <EthProvider>
+    // <EthProvider>
       <div id="App" >
         <div className="container">
-          <Intro />
+          {/* <Intro />
           <hr />
           <Setup />
           <hr />
           <Demo />
           <hr />
-          <Footer />
+          <Footer /> */}
         </div>
       </div>
-    </EthProvider>
+    //</EthProvider>
   );
 }
 
