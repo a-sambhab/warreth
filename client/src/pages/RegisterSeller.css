@@ -1,0 +1,137 @@
+.registercontain {
+  height: 91.64vh;
+  width: 100vw;
+  background: #121129;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerinnercontain {
+  height: 388px;
+  width: 431px;
+  background: rgba(18, 17, 41);
+  /* background: black; */
+  box-shadow: 4px 4px 4px #f05fb5;
+  border-radius: 25px;
+  opacity: 0.96;
+  z-index: 5;
+}
+
+.registercontain::after {
+  content: "";
+  position: absolute;
+  width: 451px;
+  height: 414px;
+  top: 10.87rem;
+  left: 27.063rem;
+  border-radius: 10%;
+  /* z-index: -5; */
+  background: linear-gradient(129.57deg, #ff5dab 0.87%, #756bff 100%);
+}
+
+.registertext {
+  position: relative;
+  top: 40px;
+  left: 40px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #c4c0ff;
+}
+
+.registertextsmall {
+  position: relative;
+  top: 60px;
+  left: 40px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #c4c0ff;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.registertextsmall2 {
+  position: relative;
+  top: 100px;
+  left: 40px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #c4c0ff;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.textbox {
+  position: relative;
+  height: 38px;
+  width: 309px;
+  top: 80px;
+  left: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.textbox2 {
+  position: relative;
+  height: 38px;
+  width: 309px;
+  top: 120px;
+  left: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.button {
+  position: relative;
+  top: 150px;
+  left: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 351px;
+  height: 55px;
+
+  background: #756bff;
+  border-radius: 4px;
+
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.buttontext {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
