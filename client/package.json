@@ -9,7 +9,7 @@
     "@babel/helper-compilation-targets": "7.19.3",
     "@babel/helper-create-class-features-plugin": "7.19.0",
     "@babel/helper-module-transforms": "7.19.6",
-    "@pushprotocol/restapi": "^0.2.2",
+    "@pushprotocol/restapi": "^0.1.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
