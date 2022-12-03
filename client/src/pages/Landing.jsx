@@ -16,23 +16,32 @@ import { Link, NavLink } from "react-router-dom";
 
 const RegisterButton = () => {
   const {sellerI,account} = useContext(Web3Context)
-  console.log(sellerI);
-  const [isregistered, setisregistered] = useState(sellerI==0);
+  // console.log(sellerI);
+  const [isregistered, setisregistered] = useState(sellerI == 0 ?false : true);
   useEffect(() => {
-    setisregistered(sellerI==0);
-  }, [])
+    // setisregistered(sellerI!=0);
+    console.log(sellerI);
+    if(sellerI == 0){
+      setisregistered(false);
+    } else {
+      setisregistered(true);
+    }
+  }, [sellerI]);
+  // setTimeout(() => {
+  //   setis
+  // }, 1000);
   
   return(
     <>
       {
-        isregistered==false?
-          <div className="registerbuttons">
-            <NavLink className="registernav" to={`/register/${account.currentAccount}`} style={{ textDecoration: 'none' }}>Register</NavLink>
-          </div>
-        :
+        isregistered?
           <div className="dashbuttons">
             <NavLink className="dashnavs" to={`/Buyer/${account.currentAccount}`}>I am a Buyer</NavLink>
             <NavLink className="dashnavs" to={`/Seller/${account.currentAccount}`}>I am a Seller</NavLink>
+          </div>
+        :
+          <div className="registerbuttons">
+            <NavLink className="registernav" to={`/register/${account.currentAccount}`} style={{ textDecoration: 'none' }}>Register</NavLink>
           </div>
 
       }

@@ -23,8 +23,8 @@
   position: absolute;
   width: 28.188rem;
   height: 31.25rem;
-  top: 8.87rem;
-  left: 27.063rem;
+  top: 5.87rem;
+  left: 29.900rem;
   border-radius: 10%;
   /* z-index: -5; */
   background: linear-gradient(129.57deg, #ff5dab 0.87%, #756bff 100%);
@@ -162,4 +162,19 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+  cursor: pointer;
+}
+
+.backgroundpng{
+  position: absolute;
+  left: 0;
+  /* top:50; */
+  width: 100%;
+  overflow: hidden;
+  top: 130px;
+  /* align-items: flex-start; */
+}
+
+.backgroundimage_bg{
+  width: 100%;
 }
