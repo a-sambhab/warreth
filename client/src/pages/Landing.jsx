@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, useEffect} from "react";
 import * as PushApi from "@pushprotocol/restapi";
 import "./Landing.css";
 import Web3Context from "../contexts";
@@ -15,8 +15,12 @@ const fetchNotifs = async () => {
 
 const RegisterButton = () => {
   const {sellerI,account} = useContext(Web3Context)
-  console.log(sellerI)
+  console.log(sellerI);
   const [isregistered, setisregistered] = useState(sellerI==0);
+  useEffect(() => {
+    setisregistered(sellerI==0);
+  }, [])
+  
   return(
     <>
       {
