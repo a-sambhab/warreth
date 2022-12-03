@@ -4,6 +4,7 @@ import { NavLink, useParams } from 'react-router-dom'
 import {createNFT} from '../contexts/useContract/writeContract'
 import {sellerId} from '../contexts/useContract/readContract'
 import Web3Context from '../contexts'
+// import * as PushApi from ""
 import './CreateWarranty.css'
 
 const CreateWarranty = () => {
@@ -88,7 +89,8 @@ const CreateWarranty = () => {
       //  console.log(finalResult);
         alert('NFT Data added');
        await createNFT(Contract,finalResult,sellerI,productId,customer.toLowerCase(),expiry,res,account.currentAccount);
-        alert('NFT created')
+        alert('NFT created');
+
         setTimeout(function () {
           window.location.href = `/seller/${account.currentAccount}`;
         }, 4000);

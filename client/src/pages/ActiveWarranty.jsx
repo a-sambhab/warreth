@@ -36,6 +36,9 @@ const Claim = (props) => {
         window.location.href = `/buyer/${account.currentAccount}`;
       }, 4000);
   }
+  // console.log(props.data);
+  // "0x1ef6b7de70353c70f88ea01a5135bebf1dc8f2b1b9cb60702aca1c65325adb7e"
+
   return(
     <>
         {props.data && props.data.status == 0 ? (
@@ -67,19 +70,19 @@ const ResellH = () => {
 }
 
 const ActiveWarranty = () => {
-  const { Contract } = useContext(Web3Context);
+  const { Contract, account } = useContext(Web3Context);
   const { id } = useParams();
   const [data, setData] = useState("");
   const [expiry,setExpiry]=useState("");
   useEffect(() => {
     getDetails();
-  }, [Contract]);
+  }, [account]);
 
   const getDetails = async () => {
     const res = await getWarrantyDetails(Contract, id);
-    console.log(res)
+    // console.log(res)
     setData(res);
-    console.log(res.buyers[0])
+    // console.log(res.buyers[0])
     const date = new Date(res.expiry*1000);
     setExpiry(date)
   };

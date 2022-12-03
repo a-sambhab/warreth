@@ -1,19 +1,31 @@
 import React, {useState, useContext, useEffect} from 'react'
 import './Navbar.css';
+import * as PushApi from '@pushprotocol/restapi'
+import * as ethers from 'ethers';
 import Web3Context from '../contexts/index';
 
 const Navbar = () => {
   const {connectWallet, account, checkIfWalletIsConnected} = useContext(Web3Context);
+  // const Pk = 
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [account])
-  console.log(account.currentAccount)
+  // console.log(account.currentAccount)
   // const [connected, setConnected] = useState();
   const connectwalletfunc = () => {
     console.log("connecting");
     connectWallet();
     // setConnected(true);
   }
+  const fetchNotifs = async () => {
+    const notifications = await PushApi.user.getFeeds({
+      user: "eip155:42:0x6455b58DA58f21a7b18C9D85228DA958599843Da", // user address in CAIP
+      env: "staging",
+    });
+  
+    console.log("Notifications: \n\n", notifications);
+  };
+  fetchNotifs();
   return (
     <div className='navcontainer'>
       <div className='navlogo'>
