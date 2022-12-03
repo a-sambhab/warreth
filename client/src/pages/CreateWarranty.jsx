@@ -1,16 +1,12 @@
 import React, {useState,useContext} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
- import client from '../utils/ipfs'
+import client from '../utils/ipfs'
 import {createNFT} from '../contexts/useContract/writeContract'
 import {sellerId} from '../contexts/useContract/readContract'
 import Web3Context from '../contexts'
-import * as PushApi from '@pushprotocol/restapi'
-import * as ethers from 'ethers'
-// import * as PushApi from ""
 import './CreateWarranty.css'
 
 const CreateWarranty = () => {
-
   const {account,Contract,sellerI} = useContext(Web3Context)
   const{add} = useParams();
     const [show, setshow] = useState('')
@@ -64,35 +60,6 @@ const CreateWarranty = () => {
           .catch((err) => console.log(err));
       };
     
-      const sendNotifications = async(buyer, orderid) => {
-        try{
-          const Pk = "476532d9d2367e760e0f67fea6557e21f734c58a7d1dee9a25ec96fe693a35e8";
-          const Pkey = `0x${Pk}`;
-          const signer = new ethers.Wallet(Pkey);
-          console.log("sending notifs");
-          const ApiResponse = await PushApi.payloads.sendNotification({
-            signer,
-            type: 3,
-            identityType: 2,
-            notification: {
-              title: `[SDK-TEST] notification TITLE`,
-              body: `[SDK-TEST] notification BODY`,
-            },
-            payload: {
-              title: `[SDK-TEST] payload TITLE`,
-              body: `Received a new NFT Warranty for Order ID ${orderid}`,
-              cta: '',
-              img: ''
-            },
-            recipients: `eip155:5:` ,         
-            channel: 'eip155:5:0x67d36FB0b3b6a1cC11343d17646A5D9c94a2d098',
-            env: 'staging',
-          });
-          console.log('API response: ', ApiResponse);
-        } catch (err) {
-          console.log(err);
-        }
-      }
       const handleData = async (res) => {
         const obj = {
         
@@ -120,15 +87,13 @@ const CreateWarranty = () => {
       //  console.log(finalResult);
         alert('NFT Data added');
        await createNFT(Contract,finalResult,sellerI,productId,customer.toLowerCase(),expiry,res,account.currentAccount);
-        alert('NFT created');
-       await sendNotifications(customer, productId);
+        alert('NFT created')
         setTimeout(function () {
           window.location.href = `/seller/${account.currentAccount}`;
         }, 4000);
       
       };  
       return (
-      
     <div className="createcontain">
       <div className="createinnercontain">
         <p className="createtext">Create Warranty</p>
@@ -149,18 +114,8 @@ const CreateWarranty = () => {
             Register
           </button>
         </div>
-        <div classname="backgroundimage_bg">
-        <img
-          className="backgroundpng"
-          alt=""
-          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670078174/ETHINDIA/bggg_zaks4g.png"
-          align="left"
-        />
       </div>
-      </div>
-      </div>
-      
-    
+    </div>
   );
 };
 
