@@ -6,7 +6,7 @@ const Navbar = () => {
   const {connectWallet, account, checkIfWalletIsConnected} = useContext(Web3Context);
   useEffect(() => {
     checkIfWalletIsConnected();
-  }, [])
+  }, [account])
   console.log(account.currentAccount)
   // const [connected, setConnected] = useState();
   const connectwalletfunc = () => {

@@ -1,11 +1,12 @@
 import React, {useState, useContext, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Web3Context from "../contexts";
 import {createSeller} from '../contexts/useContract/writeContract';
 import "./RegisterSeller.css";
 
 const RegisterSeller = () => {
   const { add } = useParams();
+  const history = useNavigate();
   const [sellerid, setsellerid] = useState("");
   const [username, setUsername] = useState("")
   const {account, Contract} = useContext(Web3Context);
@@ -15,6 +16,7 @@ const RegisterSeller = () => {
   }, []);
   const create = async() => {
     await createSeller(sellerid, Contract, account.currentAccount);
+    window.location.href = `/seller/${account.currentAccount}`;
   }
   const handlename = (e) => {
     console.log(e.target.value);
@@ -50,7 +52,7 @@ const RegisterSeller = () => {
           value={sellerid}
         />
         <div className="buttontext">
-          <button className="button" type="submit">
+          <button className="button" type="submit" onClick={create}>
             Register
           </button>
         </div>

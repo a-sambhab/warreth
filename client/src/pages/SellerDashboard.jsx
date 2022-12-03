@@ -25,7 +25,7 @@ const SellerDashboard = () => {
     // console.log(nfts);
   }, [Contract, account, sellerI]);
   const getData = async () => {
-    console.log(sellerI);
+    // console.log(sellerI);
     const res = await getSellerNFTs(Contract, sellerI);
     console.log(res);
     setNfts(res);
