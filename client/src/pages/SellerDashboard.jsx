@@ -9,7 +9,7 @@ import { getSellerNFTs } from "../contexts/useContract/readContract";
 
 const SellerDashboard = () => {
   const { add } = useParams();
-  const { connectWallet, account, Contract, sellerI } = useContext(Web3Context);
+  const { account, Contract, sellerI } = useContext(Web3Context);
   const [nfts, setNfts] = useState([]);
   const [status, setStatus] = useState(0);
   useEffect(() => {
@@ -22,7 +22,7 @@ const SellerDashboard = () => {
     console.log(res);
     setNfts(res);
   };
-  
+
   return (
     <>
       <div className="buyercontain">
@@ -62,11 +62,10 @@ const SellerDashboard = () => {
             <div className="buyermain_cards">
               {nfts.length &&
                 nfts
-                  .filter((res) => res.status == status)
+                  .filter((res) => res.status === status)
                   .map((obj) => {
                     const {
                       expiry,
-                      status,
                       creationTime,
                       productId,
                       buyers,
@@ -88,13 +87,13 @@ const SellerDashboard = () => {
           </div>
         </div>
         <div classname="backgroundimage_bg">
-        <img
-          className="backgroundpng"
-          alt=""
-          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670079859/ETHINDIA/rfwfrn_kqjz0v.png"
-          align="left"
-        />
-      </div>
+          <img
+            className="backgroundpng"
+            alt=""
+            src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670079859/ETHINDIA/rfwfrn_kqjz0v.png"
+            align="left"
+          />
+        </div>
       </div>
     </>
   );
