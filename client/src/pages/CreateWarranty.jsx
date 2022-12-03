@@ -1,12 +1,13 @@
 import React, {useState,useContext} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-// import client from '../utils/ipfs'
+ import client from '../utils/ipfs'
 import {createNFT} from '../contexts/useContract/writeContract'
 import {sellerId} from '../contexts/useContract/readContract'
 import Web3Context from '../contexts'
 import './CreateWarranty.css'
 
 const CreateWarranty = () => {
+
   const {account,Contract,sellerI} = useContext(Web3Context)
   const{add} = useParams();
     const [show, setshow] = useState('')
@@ -79,21 +80,22 @@ const CreateWarranty = () => {
             }
           ],
         };
-      //   console.log(client);
-      //   const result = await client.add(JSON.stringify(obj));
-      //   const str = 'ipfs://';
-      //   const finalResult = str.concat(String(result.path));
-      //   console.log(result)
-      // //  console.log(finalResult);
-      // alert('NFT Data added');
-      //  await createNFT(Contract,finalResult,sellerI,productId,customer.toLowerCase(),expiry,res,account.currentAccount);
-      //   alert('NFT created')
+        //console.log(client);
+        const result = await client.add(JSON.stringify(obj));
+        const str = 'ipfs://';
+        const finalResult = str.concat(String(result.path));
+        console.log(result)
+      //  console.log(finalResult);
+        alert('NFT Data added');
+       await createNFT(Contract,finalResult,sellerI,productId,customer.toLowerCase(),expiry,res,account.currentAccount);
+        alert('NFT created')
         setTimeout(function () {
           window.location.href = `/seller/${account.currentAccount}`;
         }, 4000);
       
       };  
       return (
+      
     <div className="createcontain">
       <div className="createinnercontain">
         <p className="createtext">Create Warranty</p>
@@ -114,8 +116,18 @@ const CreateWarranty = () => {
             Register
           </button>
         </div>
+        <div classname="backgroundimage_bg">
+        <img
+          className="backgroundpng"
+          alt=""
+          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670078174/ETHINDIA/bggg_zaks4g.png"
+          align="left"
+        />
       </div>
-    </div>
+      </div>
+      </div>
+      
+    
   );
 };
 
