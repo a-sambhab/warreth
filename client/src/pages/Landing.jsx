@@ -11,8 +11,8 @@ import { Link, NavLink } from "react-router-dom";
 //     env: "staging",
 //   });
 
-  console.log("Notifications: \n\n", notifications);
-};
+  // console.log("Notifications: \n\n", notifications);
+// };
 
 const RegisterButton = () => {
   const {sellerI,account} = useContext(Web3Context)
