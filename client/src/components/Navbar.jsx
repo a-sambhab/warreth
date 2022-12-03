@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className='navcontainer'>
       <div className='navlogo'>
-        LOGOOOOO
+        <img className='navlogo' alt='' src='https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670048153/ETHINDIA/Screenshot_2022-12-02_at_8.25.53_PM-removebg-preview_mj5cbs.png'/>
       </div>
       {connected?
         <div className='connected'>

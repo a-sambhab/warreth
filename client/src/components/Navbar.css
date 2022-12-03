@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.navlogo, .connectwallet, .connected{
+ .connectwallet, .connected{
     width: 20%;
     height: 100%;
     display: flex;
@@ -16,6 +16,10 @@
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.navlogo{
+    width: 300px;
 }
 
 .connected{
