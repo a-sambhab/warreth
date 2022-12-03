@@ -1,8 +1,30 @@
 import React from 'react'
-
+import "./sellerdashboard.css";
+import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
 const SellerDashboard = () => {
   return (
-    <div>SellerDashboard</div>
+    <>
+         <div className="buyercontain">
+      <div className="buyerinnercontain">
+        <div className="buyersidebar">
+          <div className="buyersidebar_warranties">
+            <div className="active_userwarranty">Active Warranties</div>
+            <div className="active_userwarranty">Pending Warranties</div>
+            <div className="active_userwarranty">Expired Warranties</div>
+          </div>
+          <div className='seller_button'>Create Warranty</div>
+        </div>
+        <div className="buyermain">
+          <div className="buyermain_cards">
+            <CardBuyerdashboard />
+            <CardBuyerdashboard />
+            <CardBuyerdashboard />
+            <CardBuyerdashboard />
+          </div>
+        </div>
+      </div>
+    </div>
+    </>
   )
 }
 

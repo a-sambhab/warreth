@@ -1,0 +1,22 @@
+.card_buyerdashboard{
+    width: fit-content;
+    height: fit-content;
+    padding: 4rem;
+    background: #F4F9FF;
+box-shadow: 4px 4px 16px #CB63CB;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+}
+
+.card_buyerdashboard_heading{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.card_buyerdashboard_subheading{
+    font-size: 14px;
+    font-weight: 200;
+   
+}

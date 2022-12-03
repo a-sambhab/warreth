@@ -39,6 +39,10 @@
     width: 25%;
     height: 100%;
     border-right: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .buyermain{
@@ -82,6 +86,14 @@
 
 
 .active_userwarranty:hover{
-    background-color: #E061C0;
-    
+    background-color: #E061C0;   
 }
+
+.seller_button{
+    background: #B28DDD;
+    border-radius: 28.5px;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+}
+
