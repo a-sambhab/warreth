@@ -3,6 +3,7 @@ import "./sellerdashboard.css";
 import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
 import { NavLink, useParams } from 'react-router-dom';
 import Web3Context from '../contexts';
+import { getSellerNFTs } from '../contexts/useContract/readContract';
 const SellerDashboard = () => {
   const {add} = useParams();
   const {connectWallet, account, Contract, sellerI} = useContext(Web3Context);
