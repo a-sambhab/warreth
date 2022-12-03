@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import * as PushApi from "@pushprotocol/restapi";
 import "./Landing.css";
+import Web3Context from "../contexts";
+import { Link, NavLink } from "react-router-dom";
 
 const fetchNotifs = async () => {
   const notifications = await PushApi.user.getFeeds({
@@ -11,7 +13,30 @@ const fetchNotifs = async () => {
   console.log("Notifications: \n\n", notifications);
 };
 
+const RegisterButton = () => {
+  const {sellerI,account} = useContext(Web3Context)
+  console.log(sellerI)
+  const [isregistered, setisregistered] = useState(sellerI==0);
+  return(
+    <>
+      {
+        isregistered==false?
+          <div className="registerbuttons">
+            <NavLink className="registernav" to={`/register/${account.currentAccount}`} style={{ textDecoration: 'none' }}>Register</NavLink>
+          </div>
+        :
+          <div className="dashbuttons">
+            <NavLink className="dashnavs" to={`/Buyer/${account.currentAccount}`}>I am a Buyer</NavLink>
+            <NavLink className="dashnavs" to={`/Seller/${account.currentAccount}`}>I am a Seller</NavLink>
+          </div>
+
+      }
+    </>
+  )
+}
+
 const Landing = () => {
+  const {account} = useContext(Web3Context)
   // fetchNotifs();
   return (
     <>
@@ -20,9 +45,13 @@ const Landing = () => {
         <div className="landingpage_left">
           <div className="landingpage_left_text">
             <div className="landingpage_left_text_heading">WARRETH</div>
+            {account.currentAccount==null?
             <div className="landingpage_left_text_subheading">
               We have something, we haven't thought yet.
             </div>
+            :
+              <RegisterButton/>
+            }
           </div>
           <div className="landingpage_left_img">
             <img className="landingpage_left_img_triangle" alt="" src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670048162/ETHINDIA/triangle_nwcumv.png"/>
