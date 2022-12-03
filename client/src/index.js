@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element: <Landing/>,
   },
   {
-    path: "registerseller/:add",
+    path: "register/:add",
     element: <RegisterSeller/>
   },
   {
