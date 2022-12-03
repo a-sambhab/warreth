@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import { NavLink, useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import client from "../utils/ipfs";
 import { createNFT } from "../contexts/useContract/writeContract";
-import { sellerId } from "../contexts/useContract/readContract";
+// import { sellerId } from "../contexts/useContract/readContract";
 import Web3Context from "../contexts";
 import * as PushApi from "@pushprotocol/restapi";
 import * as ethers from "ethers";
@@ -11,12 +11,12 @@ import "./CreateWarranty.css";
 
 const CreateWarranty = () => {
   const { account, Contract, sellerI } = useContext(Web3Context);
-  const { add } = useParams();
-  const [show, setshow] = useState("");
+  // const { add } = useParams();
+  const [setshow] = useState("");
   const [productId, setProductId] = useState("");
   const [customer, setCustomer] = useState("");
   const [expiry, setExpiry] = useState("");
-  const [coverImageURI, setCoverImageURI] = useState("");
+  const [setCoverImageURI] = useState("");
   const [Coverimage, setCoverImage] = useState("");
 
   //const [pic,setPic]=useState()
