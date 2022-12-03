@@ -7,7 +7,10 @@ const BuyerDashboard = () => {
   return (
     <div className='buyercontain'>
       <div className='buyerinnercontain'>
-        
+        <div className='buyersidebar'>
+
+        </div>
+        <div className='buyermain'></div>
       </div>
     </div>
   )
