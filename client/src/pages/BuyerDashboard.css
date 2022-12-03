@@ -1,0 +1,30 @@
+.buyercontain{
+    height: 91.64vh;
+    width: 100vw;
+    background: #121129;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buyerinnercontain{
+    height: 90%;
+    width: 90%;
+    background: rgba(18, 17, 41);
+    /* background: black; */
+    box-shadow: 4px 4px 4px #F05FB5;
+    border-radius: 25px;
+    opacity: 0.96;
+    z-index: 5;
+}
+
+.buyercontain::after{
+    content: "";
+    position: absolute;
+    width: 1091px;
+    height: 423px;
+    top: 5rem;
+    left: 2.5rem;
+    /* z-index: -5; */
+    background: linear-gradient(129.57deg, #FF5DAB 0.87%, #756BFF 100%);
+}
