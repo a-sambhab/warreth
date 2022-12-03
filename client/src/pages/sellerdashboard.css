@@ -94,3 +94,17 @@
   margin: 1rem;
   text-decoration: none;
 }
+
+.backgroundpng{
+  position: absolute;
+  left: 0;
+  /* top:50; */
+  width: 100%;
+  overflow: hidden;
+  top: 130px;
+  /* align-items: flex-start; */
+}
+
+.backgroundimage_bg{
+  width: 100%;
+}
