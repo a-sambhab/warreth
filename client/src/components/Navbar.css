@@ -3,7 +3,7 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    background: linear-gradient(90deg, #a35e6e -8.75%, #FA5EAE 104.29%, rgba(26, 31, 50, 0) 104.3%);
+    background: linear-gradient(90deg, #c947ed9f -8.75%, #FA5EAE 104.29%, rgba(26, 31, 50, 0) 104.3%);
     justify-content: space-between;
     align-items: center;
 }

@@ -20,6 +20,14 @@ const RegisterSeller = () => {
           </button>
         </div>
       </div>
+      <div classname="backgroundimage_bg">
+        <img
+          className="backgroundpng"
+          alt=""
+          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670078174/ETHINDIA/bggg_zaks4g.png"
+          align="left"
+        />
+      </div>
     </div>
   );
 };

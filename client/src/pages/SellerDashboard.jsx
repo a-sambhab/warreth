@@ -86,6 +86,14 @@ const SellerDashboard = () => {
             </div>
           </div>
         </div>
+        <div classname="backgroundimage_bg">
+        <img
+          className="backgroundpng"
+          alt=""
+          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670079859/ETHINDIA/rfwfrn_kqjz0v.png"
+          align="left"
+        />
+      </div>
       </div>
     </>
   );
