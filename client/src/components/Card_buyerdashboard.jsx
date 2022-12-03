@@ -1,15 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./card_buyerdashboard.css";
 
-export const CardBuyerdashboard = () => {
+export const CardBuyerdashboard = (props) => {
+  var date = new Date(props.expiry*1000);
   return (
     <>
-      <div className="card_buyerdashboard">
+      <NavLink to={`/warranty/${props.productId}`} className="card_buyerdashboard">
         <div className="card_buyerdashboard_heading">One plus</div>
         <div className="card_buyerdashboard_subheading">Description: One plus phone 8T</div>
-        <div className="card_buyerdashboard_subheading">Token ID: #DIJD654DF </div>
-        <div className="card_buyerdashboard_subheading">Expiry Date: 22nd Nov 2023</div>
-      </div>
+        <div className="card_buyerdashboard_subheading">Token ID: #{props.tokenId} </div>
+        <div className="card_buyerdashboard_subheading">Expiry Date: {String(date).slice(4,25)}</div>
+      </NavLink>
     </>
   );
 };

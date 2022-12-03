@@ -73,6 +73,7 @@
     width: fit-content;
     padding: 1rem;
     margin: 1rem;
+    cursor: pointer;
 }
 
 .active_userwarranty:active{

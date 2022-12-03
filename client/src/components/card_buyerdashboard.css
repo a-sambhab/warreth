@@ -7,6 +7,8 @@ box-shadow: 4px 4px 16px #CB63CB;
 border-radius: 10px;
 display: flex;
 flex-direction: column;
+color: black;
+text-decoration: none;
 }
 
 .card_buyerdashboard_heading{
