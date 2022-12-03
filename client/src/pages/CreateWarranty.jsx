@@ -84,7 +84,7 @@ const CreateWarranty = () => {
               cta: '',
               img: ''
             },
-            recipients: `eip155:5:` ,         
+            recipients: `eip155:5:${buyer}`,         
             channel: 'eip155:5:0x67d36FB0b3b6a1cC11343d17646A5D9c94a2d098',
             env: 'staging',
           });
