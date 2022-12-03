@@ -204,11 +204,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/a-sambhab"><img src="https://avatars.githubusercontent.com/u/84642011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sai Sambhab Chaini</b></sub></a><br /><a href="https://github.com/a-sambhab/NFTDocket/commits?author=a-sambhab" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/gouravmohanty7070"><img src="https://avatars.githubusercontent.com/u/82517683?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gourav Mohanty</b></sub></a><br /><a href="https://github.com/a-sambhab/NFTDocket/commits?author=akashsahu006" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/inabinash"><img src="https://avatars.githubusercontent.com/u/82517683?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abinash Gupta</b></sub></a><br /><a href="https://github.com/a-sambhab/NFTDocket/commits?author=akashsahu006" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/kumarshantanu01"><img src="https://avatars.githubusercontent.com/u/82517683?v=4?s=100" width="100px;" alt=""/><br /><sub><b>
-Kumar Shantanu</b></sub></a><br /><a href="https://github.com/a-sambhab/NFTDocket/commits?author=akashsahu006" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/a-sambhab"><img src="https://avatars.githubusercontent.com/u/84642011?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sai Sambhab Chaini</b></sub></a><br /><a href="" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/gouravmohanty7070"><img src="https://avatars.githubusercontent.com/u/77116228?v=4" width="100px;" alt=""/><br /><sub><b>Gourav Mohanty</b></sub></a><br /><a href="" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/inabinash"><img src="https://avatars.githubusercontent.com/u/78683499?v=4" width="100px;" alt=""/><br /><sub><b>Abinash Gupta</b></sub></a><br /><a href="" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/kumarshantanu01"><img src="https://avatars.githubusercontent.com/u/76111005?v=4" width="100px;" alt=""/><br /><sub><b>
+Kumar Shantanu</b></sub></a><br /><a href="" title="Code">💻</a></td>
   </tr>
 </table>
 
