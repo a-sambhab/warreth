@@ -4,6 +4,7 @@ import "./card_buyerdashboard.css";
 
 export const CardBuyerdashboard = (props) => {
   var date = new Date(props.expiry*1000);
+
   return (
     <>
       <NavLink to={`/warranty/${props.productId}`} className="card_buyerdashboard">

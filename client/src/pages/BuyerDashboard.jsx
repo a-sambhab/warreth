@@ -9,7 +9,7 @@ const BuyerDashboard = () => {
   const { add } = useParams();
   const {connectWallet, account, Contract} = useContext(Web3Context);
   const [nfts, setnfts] = useState([]);
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState(0)
   useEffect(() => {
     getData();
   }, [Contract, add]);

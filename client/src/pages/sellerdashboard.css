@@ -1,101 +1,96 @@
-.buyercontain{
-    height: 91.64vh;
-    width: 100vw;
-    background: #121129;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.buyercontain {
+  height: 91.64vh;
+  width: 100vw;
+  background: #121129;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.buyerinnercontain{
-    height: 90%;
-    width: 90%;
-    background: rgba(18, 17, 41);
-    /* background: black; */
-    box-shadow: 4px 4px 4px #F05FB5;
-    border-radius: 25px;
-    opacity: 0.96;
-    z-index: 5;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.buyerinnercontain {
+  height: 90%;
+  width: 90%;
+  background: rgba(18, 17, 41);
+  /* background: black; */
+  box-shadow: 4px 4px 4px #f05fb5;
+  border-radius: 25px;
+  opacity: 0.96;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.buyercontain::after{
-    content: "";
-    position: absolute;
-    width: 1091px;
-    height: 423px;
-    top: 5rem;
-    left: 2.5rem;
-    /* z-index: -5; */
-    background: linear-gradient(129.57deg, #FF5DAB 0.87%, #756BFF 100%);
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+.buyercontain::after {
+  content: "";
+  position: absolute;
+  width: 1091px;
+  height: 423px;
+  top: 5rem;
+  left: 2.5rem;
+  /* z-index: -5; */
+  background: linear-gradient(129.57deg, #ff5dab 0.87%, #756bff 100%);
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.buyersidebar{
-    width: 25%;
-    height: 100%;
-    border-right: 2px solid white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.buyersidebar {
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.buyermain{
-    width: 75%;
-    height: 100%;
-    overflow-y: scroll;
+.buyermain {
+  width: 75%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
-.buyermain_cards{
-    
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    justify-content: space-around;
+.buyermain_cards {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: space-around;
 }
 
-.buyermain::-webkit-scrollbar{
-    display: none;
+.buyermain::-webkit-scrollbar {
+  display: none;
 }
 
-.buyersidebar_warranties{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+.buyersidebar_warranties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
-.active_userwarranty{
-    background: #F4F9FF;
-    border-radius: 28.5px;
-    width: fit-content;
-    padding: 1rem;
-    margin: 1rem;
+.active_userwarranty {
+  background: #f4f9ff;
+  border-radius: 28.5px;
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem;
 }
 
-.active_userwarranty:active{
-    background: #000;
-    
+.active_userwarranty:active {
+  background: #000;
 }
 
-
-.active_userwarranty:hover{
-    background-color: #E061C0;   
+.active_userwarranty:hover {
+  background-color: #e061c0;
 }
 
-.seller_button{
-    background: #B28DDD;
-    border-radius: 28.5px;
-    width: fit-content;
-    padding: 1rem;
-    margin: 1rem;
-    color: black;
-    text-decoration: none;
+.seller_button {
+  background: #b28ddd;
+  border-radius: 28.5px;
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
 }
-
