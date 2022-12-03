@@ -9,9 +9,9 @@
 
 .createinnercontain {
   position: absolute;
-  top: 120px;
-  height: 650px;
-  width: 431px;
+  top: 7.5rem;
+  height: 40.625rem;
+  width: 26.938rem;
   background: rgba(18, 17, 41);
   /* background: black; */
   box-shadow: 4px 4px 4px #f05fb5;
@@ -23,8 +23,8 @@
 .createcontain::after {
   content: "";
   position: absolute;
-  width: 451px;
-  height: 630px;
+  width: 28.188rem;
+  height: 39.375rem;
   top: 5.563rem;
   left: 27.063rem;
   border-radius: 10%;
@@ -34,13 +34,13 @@
 
 .createtext {
   position: relative;
-  top: 40px;
-  left: 40px;
+  top: 2.5rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -49,8 +49,8 @@
 
 .createtextsmall {
   position: relative;
-  top: 60px;
-  left: 40px;
+  top: 3.75rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -64,8 +64,8 @@
 
 .createtextsmall2 {
   position: relative;
-  top: 100px;
-  left: 40px;
+  top: 6.25rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -79,8 +79,8 @@
 
 .createtextsmall3 {
   position: relative;
-  top: 140px;
-  left: 40px;
+  top: 8.75rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -94,8 +94,8 @@
 
 .createtextsmall4 {
   position: relative;
-  top: 180px;
-  left: 40px;
+  top: 11.25rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -109,10 +109,10 @@
 
 .textboxcreate {
   position: relative;
-  height: 38px;
-  width: 309px;
-  top: 80px;
-  left: 40px;
+  height: 2.375rem;
+  width: 19.313rem;
+  top: 5rem;
+  left: 2.5rem;
   background: #ffffff;
   border-radius: 10px;
   flex: none;
@@ -122,10 +122,10 @@
 
 .textbox2create {
   position: relative;
-  height: 38px;
-  width: 309px;
-  top: 120px;
-  left: 40px;
+  height: 2.375rem;
+  width: 19.313rem;
+  top: 7.5rem;
+  left: 2.5rem;
   background: #ffffff;
   border-radius: 10px;
   flex: none;
@@ -135,10 +135,10 @@
 
 .textbox3create {
   position: relative;
-  height: 38px;
-  width: 309px;
-  top: 160px;
-  left: 40px;
+  height: 2.375rem;
+  width: 19.313rem;
+  top: 10rem;
+  left: 2.5rem;
   background: #ffffff;
   border-radius: 10px;
   flex: none;
@@ -148,10 +148,10 @@
 
 .textbox4create {
   position: relative;
-  height: 38px;
-  width: 309px;
-  top: 200px;
-  left: 40px;
+  height: 2.375rem;
+  width: 19.313rem;
+  top: 12.5rem;
+  left: 2.5rem;
   background: #ffffff;
   border-radius: 10px;
   flex: none;
@@ -161,8 +161,8 @@
 
 .buttoncreate {
   position: relative;
-  top: 245px;
-  left: 40px;
+  top: 15.313rem;
+  left: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -170,8 +170,8 @@
   padding: 16px;
   gap: 10px;
 
-  width: 351px;
-  height: 40px;
+  width: 21.938rem;
+  height: 2.5rem;
 
   background: #756bff;
   border-radius: 4px;
@@ -196,8 +196,8 @@
 
 .imagewarranty {
   position: relative;
-  top: 220px;
-  left: 40px;
+  top: 13.375rem;
+  left: 2.5rem;
   font-family: "Mulish";
   font-style: normal;
   font-weight: 700;
@@ -211,12 +211,12 @@
 
 .buttonimage {
   position: relative;
-  top: 230px;
-  left: 40px;
+  top: 14.375rem;
+  left: 2.5rem;
   padding: 10px 20px;
 
-  width: 180px;
-  height: 20px;
+  width: 11.25rem;
+  height: 1.25rem;
 
   background: #756bff;
   border-radius: 4px;
