@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     element: <SellerDashboard/>
   },
   {
-    path: "active/:id",
+    path: "warranty/:id",
     element: <ActiveWarranty/>
   },
   {
