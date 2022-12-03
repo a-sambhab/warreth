@@ -95,6 +95,7 @@ const CreateWarranty = () => {
       
       };  
       return (
+      
     <div className="createcontain">
       <div className="createinnercontain">
         <p className="createtext">Create Warranty</p>
@@ -124,8 +125,9 @@ const CreateWarranty = () => {
         />
       </div>
       </div>
+      </div>
       
-    </>
+    
   );
 };
 
