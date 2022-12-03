@@ -30,6 +30,7 @@ const SellerDashboard = () => {
     console.log(res);
     setNfts(res);
   };
+  
   return (
     <>
       <div className="buyercontain">
