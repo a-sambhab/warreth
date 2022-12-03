@@ -16,10 +16,16 @@ const Landing = () => {
   return (
     <>
       <div className="landingpage">
-        <div className="landingpage_left"></div>
+      {/* <div className="landingcontain">Landing</div> */}
+        <div className="landingpage_left">
+          <div className="landingpage_left_text">
+            <div className="landingpage_left_text_heading">WARRETH</div>
+            <div className="landingpage_left_text_subheading">We have something, we havennt thought yet.</div>
+          </div>
+        </div>
         <div className="landingpage_right"></div>
       </div>
-      <div className="landingcontain">Landing</div>
+    
     </>
   );
 };
