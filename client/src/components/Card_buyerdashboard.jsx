@@ -7,7 +7,7 @@ export const CardBuyerdashboard = (props) => {
 
   return (
     <>
-      <NavLink to={`/warranty/${props.productId}`} className="card_buyerdashboard">
+      <NavLink to={`/warranty/${props.tokenId}`} className="card_buyerdashboard">
         <div className="card_buyerdashboard_heading">One plus</div>
         <div className="card_buyerdashboard_subheading">Description: One plus phone 8T</div>
         <div className="card_buyerdashboard_subheading">Token ID: #{props.tokenId} </div>
