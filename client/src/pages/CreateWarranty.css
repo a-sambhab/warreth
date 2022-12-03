@@ -9,8 +9,8 @@
 
 .createinnercontain {
   position: absolute;
-  top: 100px;
-  height: 85%;
+  top: 160px;
+  height: 610px;
   width: 431px;
   background: rgba(18, 17, 41);
   /* background: black; */
@@ -24,9 +24,9 @@
   content: "";
   position: absolute;
   width: 451px;
-  height: 85%;
-  top: 4.563rem;
-  left: 30.063rem;
+  height: 615px;
+  top: 7.563rem;
+  left: 27.063rem;
   border-radius: 10%;
   /* z-index: -5; */
   background: linear-gradient(129.57deg, #ff5dab 0.87%, #756bff 100%);
