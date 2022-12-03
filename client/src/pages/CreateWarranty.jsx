@@ -1,4 +1,4 @@
-//<<<<<<< HEAD
+
 import React, {useState,useContext} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import client from '../utils/ipfs'
@@ -16,7 +16,7 @@ const CreateWarranty = () => {
     const[expiry,setExpiry]=useState("")
     const[coverImageURI,setCoverImageURI] = useState("")
     const[Coverimage,setCoverImage] = useState("")
-=======
+
 import React, { useState, useContext } from "react";
 // import { useParams } from "react-router-dom";
 import client from "../utils/ipfs";
@@ -109,7 +109,6 @@ const CreateWarranty = () => {
     } catch (err) {
       console.log(err);
     }
-<<<<<<< HEAD
     const handleProductId= (event) => {
         setProductId(() => ([event.target.name] = event.target.value));
       };
@@ -181,7 +180,6 @@ const CreateWarranty = () => {
       
       };  
       return (
-=======
   };
   const handleData = async (res) => {
     const obj = {
@@ -225,7 +223,6 @@ const CreateWarranty = () => {
     }, 4000);
   };
   return (
->>>>>>> e66c2cb8846c35e120703a6057c1ffa8c9b62fdc
     <div className="createcontain">
       <div className="createinnercontain">
         <p className="createtext">Create Warranty</p>
@@ -259,8 +256,6 @@ const CreateWarranty = () => {
             Register
           </button>
         </div>
-<<<<<<< HEAD
-=======
         <div classname="backgroundimage_bg">
           <img
             className="backgroundpng"
@@ -269,7 +264,6 @@ const CreateWarranty = () => {
             align="left"
           />
         </div>
->>>>>>> e66c2cb8846c35e120703a6057c1ffa8c9b62fdc
       </div>
     </div>
   );
