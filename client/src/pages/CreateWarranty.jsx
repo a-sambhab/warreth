@@ -16,6 +16,10 @@ const CreateWarranty = () => {
         <input className="textbox3create" type="text" />
         <p className="createtextsmall4">Validity</p>
         <input className="textbox4create" type="text" />
+        <div>
+          <h1 className="imagewarranty">Upload Image</h1>
+          <input className="buttonimage" type="file" />
+        </div>
         <div className="buttontextcreate">
           <button className="buttoncreate" type="submit">
             Register

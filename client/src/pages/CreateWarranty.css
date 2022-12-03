@@ -9,8 +9,8 @@
 
 .createinnercontain {
   position: absolute;
-  top: 160px;
-  height: 610px;
+  top: 120px;
+  height: 650px;
   width: 431px;
   background: rgba(18, 17, 41);
   /* background: black; */
@@ -24,8 +24,8 @@
   content: "";
   position: absolute;
   width: 451px;
-  height: 615px;
-  top: 7.563rem;
+  height: 630px;
+  top: 5.563rem;
   left: 27.063rem;
   border-radius: 10%;
   /* z-index: -5; */
@@ -161,7 +161,7 @@
 
 .buttoncreate {
   position: relative;
-  top: 230px;
+  top: 245px;
   left: 40px;
   display: flex;
   flex-direction: row;
@@ -171,7 +171,7 @@
   gap: 10px;
 
   width: 351px;
-  height: 55px;
+  height: 40px;
 
   background: #756bff;
   border-radius: 4px;
@@ -191,5 +191,38 @@
   color: #ffffff;
   flex: none;
   order: 0;
+  flex-grow: 0;
+}
+
+.imagewarranty {
+  position: relative;
+  top: 220px;
+  left: 40px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #c4c0ff;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.buttonimage {
+  position: relative;
+  top: 230px;
+  left: 40px;
+  padding: 10px 20px;
+
+  width: 180px;
+  height: 20px;
+
+  background: #756bff;
+  border-radius: 4px;
+
+  flex: none;
+  order: 3;
+  align-self: stretch;
   flex-grow: 0;
 }

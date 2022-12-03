@@ -8,7 +8,7 @@
 }
 
 .registerinnercontain {
-  height: 388px;
+  height: 510px;
   width: 431px;
   background: rgba(18, 17, 41);
   /* background: black; */
@@ -22,8 +22,8 @@
   content: "";
   position: absolute;
   width: 451px;
-  height: 414px;
-  top: 10.87rem;
+  height: 500px;
+  top: 8.87rem;
   left: 27.063rem;
   border-radius: 10%;
   /* z-index: -5; */
@@ -75,6 +75,21 @@
   flex-grow: 1;
 }
 
+.registertextsmall3 {
+  position: relative;
+  top: 140px;
+  left: 40px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #c4c0ff;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
 .textbox {
   position: relative;
   height: 38px;
@@ -101,9 +116,22 @@
   flex-grow: 0;
 }
 
+.textbox3 {
+  position: relative;
+  height: 38px;
+  width: 309px;
+  top: 160px;
+  left: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
 .button {
   position: relative;
-  top: 150px;
+  top: 190px;
   left: 40px;
   display: flex;
   flex-direction: row;
