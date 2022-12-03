@@ -1,0 +1,46 @@
+.product_card{
+    width: fit-content;
+    height: 40vh;
+    padding: 4rem;
+    background: #F4F9FF;
+box-shadow: 4px 4px 16px #CB63CB;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.card_buyerdashboard_heading{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.card_buyerdashboard_subheading{
+    font-size: 14px;
+    font-weight: 200;
+   
+}
+
+.cardbuttons{
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+}
+
+.resell_button{
+    background: #E061C0;
+    border-radius: 28.5px;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.history_button{
+    background: #E061C0;
+    border-radius: 28.5px;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+}
