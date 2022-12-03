@@ -1,13 +1,11 @@
 import React from "react";
 import "./sellerdashboard.css";
 import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
-<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
-=======
-import { NavLink, useParams } from 'react-router-dom';
-import Web3Context from '../contexts';
-import { getSellerNFTs } from '../contexts/useContract/readContract';
->>>>>>> c631359b3abad97fd3ff8a58ee44176f26e1bcb1
+import { useParams } from "react-router-dom";
+import Web3Context from "../contexts";
+import { getSellerNFTs } from "../contexts/useContract/readContract";
+// >>>>>>> c631359b3abad97fd3ff8a58ee44176f26e1bcb1
 const SellerDashboard = () => {
   return (
     <>
