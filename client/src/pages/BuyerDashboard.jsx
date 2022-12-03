@@ -53,7 +53,7 @@ const BuyerDashboard = () => {
           </div>
         </div>
       </div>
-      <div classname="backgroundimage_bg">
+      <div className="backgroundimage_bg">
         <img
           className="backgroundpng"
           alt=""

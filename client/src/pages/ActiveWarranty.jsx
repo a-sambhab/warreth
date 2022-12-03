@@ -1,11 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
+
 import { NavLink, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { getWarrantyDetails } from "../contexts/useContract/readContract";
 import Web3Context from "../contexts";
 import { verify,claim } from "../contexts/useContract/writeContract";
 import './Activewarranty.css';
+import Resell  from "./Resell";
 // import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
+
+
 
 const Claim = (props) => {
   const { Contract, account } = useContext(Web3Context);
@@ -60,10 +65,10 @@ const Claim = (props) => {
   );
 }
 
-const ResellH = () => {
+const ResellH = (props) => {
   return(
     <>
-      <div className="resell_button">Resell</div>
+      <NavLink className="resell_button" to={`/resell/${props.id}`}>Resell</NavLink>
       <div className="history_button">History</div>
     </>
   )
@@ -128,7 +133,9 @@ const ActiveWarranty = () => {
                     id = {id}
                   />
                   :
-                  <ResellH/>
+                  <ResellH
+                    id = {id}
+                  />
                   }
                 </div>
               </div>
