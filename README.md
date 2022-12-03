@@ -31,3 +31,123 @@
     <a href="https://nftdocket.vercel.app/">View Live</a>
   </p>
 </p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+      </ul>
+        <li><a href="#built-with">Built With</a></li>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#running-the-project">Running the project</a></li>
+      </ul>
+    </li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#block-diagram">Block Diagram</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+      <li><a href="#future-scope">Future Scope</a></li>
+    <li><a href="#contributors">Contributors</a></li>
+  </ol>
+</details>
+
+## About The Project
+
+Warreth is a Decentralised Warranty Issue platform that can be used by sellers to dispatch their warranties to buyers via a NFT built using Polygon. Free up your cupboard spaces and store your warranties in the digital world in the form of NFTs having proper ownership proof over it. Now the warranty is not a piece of paper but a form of token. Start storing warranties by registering below.  
+We have used the Soulbound NFT concept to provide Warrranties that can not be a victim of theft with the added features of Expiry date and Resell that makes it convenient to be used in many more use-cases.
+
+## Built With
+
+Following technologies and libraries are used for the development of this website
+
+- [React](https://reactjs.org/)
+- [IPFS](https://ipfs.io/)
+- [Vercel](https://vercel.com/)
+- [React Router](https://reactrouter.com/)
+- [Solidity](https://docs.soliditylang.org/)
+- [Polygon](https://polygon.technology/)
+- [Ethereum](https://ethereum.org/en/)
+- [Web3.js](https://web3js.readthedocs.io/)
+- [Gelato Ops](https://app.gelato.network/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Getting Started
+
+To setup the project locally the steps below.
+
+### Prerequisites
+
+- Please make sure you have [metamask](https://metamask.io/) installed and connected to polygon's mumbai testnet and have some test matic in your wallet
+
+- [Node.js](https://nodejs.org/en/download/)
+
+```sh
+  # Homebrew
+  brew install nodejs
+
+  # Sudo apt
+  sudo apt install nodejs
+
+  # Packman
+  pacman -S nodejs
+
+  # Module Install
+  dnf module install nodejs:<stream> # stream is the version
+
+  # Windows (chocolaty)
+  cinst nodejs.install
+
+```
+
+- [Git](https://git-scm.com/downloads)
+
+```sh
+  # Homebrew
+  brew install git
+
+  # Sudo apt
+  apt-get install git
+
+  # Packman
+  pacman -S git
+
+  # Module Install (Fedora)
+  dnf install git
+
+```
+
+
+### Running the project.
+
+The project uses NPM. It is strictly advised to stick with NPM so as to avoid dependency conflicts down the line.
+
+```
+## Checkout into the project client directory
+cd client
+
+## Install Dependencies
+npm install
+
+## Run the Project
+npm start
+
+```
+
+Following are the commands to remove/add new dependencies using yarn
+
+```
+## Add a new Package
+npm install <package-name>
+
+## Remove an existing Package
+npm uninstall <package-name>
+
+## Save Package as a Dev Dependency
+npm install <package-name> --save-dev
+```
