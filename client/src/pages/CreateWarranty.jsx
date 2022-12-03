@@ -1,4 +1,3 @@
-
 import React, { useState, useContext } from "react";
 import { NavLink, useParams } from "react-router-dom";
 // import client from '../utils/ipfs'
@@ -90,10 +89,9 @@ const CreateWarranty = () => {
     }, 4000);
   };
   return (
-=======
 import React, {useState,useContext} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
- import client from '../utils/ipfs'
+import client from '../utils/ipfs'
 import {createNFT} from '../contexts/useContract/writeContract'
 import {sellerId} from '../contexts/useContract/readContract'
 import Web3Context from '../contexts'
@@ -222,7 +220,6 @@ const CreateWarranty = () => {
       };  
       return (
       
->>>>>>> 9a84db8b4c47e53ce1d9704d5c128d229fd6fadb
     <div className="createcontain">
       <div className="createinnercontain">
         <p className="createtext">Create Warranty</p>
@@ -271,4 +268,4 @@ const CreateWarranty = () => {
   );
 };
 
-export default CreateWarranty;
+export default CreateWarranty
