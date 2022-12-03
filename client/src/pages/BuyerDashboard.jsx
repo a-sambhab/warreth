@@ -24,17 +24,32 @@ const BuyerDashboard = () => {
       <div className="buyerinnercontain">
         <div className="buyersidebar">
           <div className="buyersidebar_warranties">
-            <div className="active_userwarranty">Active Warranties</div>
-            <div className="active_userwarranty">Pending Warranties</div>
-            <div className="active_userwarranty">Expired Warranties</div>
+            <div className="active_userwarranty" onClick={()=>{setStatus(2)}}>Active Warranties</div>
+            <div className="active_userwarranty" onClick={()=>{setStatus(0)}}>Pending Warranties</div>
+            <div className="active_userwarranty" onClick={()=>{setStatus(3)}}>Expired Warranties</div>
           </div>
         </div>
         <div className="buyermain">
           <div className="buyermain_cards">
+          {nfts.length&&nfts
+            .filter((res)=>res.status == status)
+            .map((obj)=>{
+              const {expiry, status, creationTime, productId, buyers, imageURI, tokenId} = obj;
+              return(
+                <CardBuyerdashboard
+                  expiry = {expiry}
+                  creationTime = {creationTime}
+                  productId = {productId}
+                  buyers = {buyers}
+                  imageURI = {imageURI}
+                  tokenId = {tokenId}
+                />
+              );
+            })}
+            {/* <CardBuyerdashboard />
             <CardBuyerdashboard />
             <CardBuyerdashboard />
-            <CardBuyerdashboard />
-            <CardBuyerdashboard />
+            <CardBuyerdashboard /> */}
           </div>
         </div>
       </div>

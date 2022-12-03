@@ -1,17 +1,11 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from 'react'
 import "./sellerdashboard.css";
 import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
-<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Web3Context from "../contexts";
 import { getSellerNFTs } from "../contexts/useContract/readContract";
 // >>>>>>> c631359b3abad97fd3ff8a58ee44176f26e1bcb1
-=======
-import { NavLink, useParams } from 'react-router-dom';
-import Web3Context from '../contexts';
-import { getSellerNFTs } from '../contexts/useContract/readContract';
->>>>>>> 8bb6a7d21725cd1bc9b5cefa05c15861eb5ed5df
 const SellerDashboard = () => {
   const {add} = useParams();
   const {connectWallet, account, Contract, sellerI} = useContext(Web3Context);
