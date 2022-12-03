@@ -4,6 +4,7 @@ import "./Landing.css";
 import Web3Context from "../contexts";
 import { Link, NavLink } from "react-router-dom";
 
+
 const fetchNotifs = async () => {
   const notifications = await PushApi.user.getFeeds({
     user: "eip155:42:0xD8634C39BBFd4033c0d3289C4515275102423681", // user address in CAIP
