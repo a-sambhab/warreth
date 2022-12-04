@@ -28,7 +28,7 @@
   <p align="center">
     The official repository for the website of Warreth.
     <br />
-    <a href="https://github.com/a-sambhab/warreth">View Live</a>
+    <a href="https://bafybeie3vuqqeducccyk6keasbr4byuv2aktaip4dbo252etuj4o4b6fs4.ipfs.gateway.valist.io/">View Live</a>
   </p>
 </p>
 
