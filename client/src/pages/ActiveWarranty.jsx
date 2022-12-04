@@ -65,7 +65,7 @@ const Claim = (props) => {
       console.log(err);
     }
   }
-    const verifying = async () => {
+  const verifying = async () => {
     
     console.log("Start Verifying")
     const res = await verify(
@@ -86,8 +86,8 @@ const Claim = (props) => {
   const claiming = async()=>{
     await claim(Contract,account.currentAccount,Math.round(id/ 1000000),id);
     setTimeout(function () {
-        window.location.href = `/buyer/${account.currentAccount}`;
-      }, 4000);
+      window.location.href = `/buyer/${account.currentAccount}`;
+    }, 4000);
   }
   // console.log(props.data);
   // "0x1ef6b7de70353c70f88ea01a5135bebf1dc8f2b1b9cb60702aca1c65325adb7e"
@@ -95,20 +95,20 @@ const Claim = (props) => {
   return(
     <>
         {props.data && props.data.status == 0 ? (
-            <button
-              className="w-1/3 h-10 bg-new hover:bg-tertiary hover:text-black bottom-2 border-black rounded-xl text-white m-2"
-              onClick={verifying}
-            >
-              Verify Ownership
-            </button>
-          ) : (
-            <button
-            className="w-1/3 h-10 bg-new hover:bg-tertiary hover:text-black bottom-2 border-black rounded-xl text-white m-2"
-            onClick={claiming}
-          >
-            Claim Warranty NFT
-          </button>
-          )}
+        <button
+          className="w-1/3 h-10 bg-new hover:bg-tertiary hover:text-black bottom-2 border-black rounded-xl text-white m-2"
+          onClick={verifying}
+        >
+          Verify Ownership
+        </button>
+      ) : (
+        <button
+          className="w-1/3 h-10 bg-new hover:bg-tertiary hover:text-black bottom-2 border-black rounded-xl text-white m-2"
+          onClick={claiming}
+        >
+          Claim Warranty NFT
+        </button>
+      )}
     </>
   );
 }
@@ -169,10 +169,10 @@ const ActiveWarranty = () => {
                 </div>
                 {data && (data.status == 2 || data.status == 3) ? 
                   <a href={`https://testnets.opensea.io/assets/mumbai/0xeB5Cd3Df767b924527DE6866aE2f5233ff0a03c3/${data.tokenId}`} className="text-right mt-5 cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
-              See at OpenSea
-            </a>
+                    See at OpenSea
+                  </a>
                 :
-                <div></div>
+                  <div></div>
                 }
                 <div className="cardbuttons">
                   {(data.status == 0 || data.status == 1)?
