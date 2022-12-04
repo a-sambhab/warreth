@@ -63,7 +63,7 @@ const Landing = () => {
             <div className="landingpage_left_text_heading">WARRETH</div>
             {account.currentAccount == null ? (
               <div className="landingpage_left_text_subheading">
-                We have something, we haven't thought yet.
+                Free up your cupboard spaces and store your warranties in the digital world in the form of NFTs having proper ownership proof over it.
               </div>
             ) : (
               <RegisterButton />

@@ -3,6 +3,7 @@ import './Navbar.css';
 import Web3Context from '../contexts/index';
 import Notif from './Notif';
 import Web3 from 'web3';
+import * as ethers from 'ethers';
 
 
 const Navbar = () => {
