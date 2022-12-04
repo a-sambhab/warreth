@@ -1,7 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react'
 import './Navbar.css';
-import * as PushApi from '@pushprotocol/restapi'
-import * as ethers from 'ethers';
 import Web3Context from '../contexts/index';
 import Notif from './Notif';
 import Web3 from 'web3';

@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { getWarrantyDetails,resell } from "../contexts/useContract/readContract";
 import Web3Context from "../contexts";
+import './Resell.css';
 
 function Resell() {
   const { Contract,account } = useContext(Web3Context);
@@ -29,13 +30,16 @@ function Resell() {
   }
   return (
     <>
-      <div className="w-screen h-screen">
-        <div className="w-full h-full bg-new-secondary flex flex-col justify-center items-center">
-          <div className="w-1/3 h-4/6 flex justify-start items-center flex-col bg-secondary-3 rounded-lg border-2 border-black">
-            <div className="text-2xl mt-4 font-bold">
+      <div className="">
+        <div className="">
+          <div className="">
+            <div className="">
+
+            <div className="">
               Warranty #{id}
             </div>
-            <div className="flex flex-col justify-evenly items-center w-full h-3/4">
+            </div>
+            <div className="">
               <img
                 className="w-auto rounded-lg p-0.5 h-2/3 mt-5 mb-5"
                 src={data.imageURI}
@@ -74,6 +78,7 @@ function Resell() {
           </NavLink>
         </div>
       </div>
+
     </>
   );
 }

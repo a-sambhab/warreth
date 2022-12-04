@@ -11,6 +11,24 @@ import * as ethers from 'ethers'
 import Resell  from "./Resell";
 // import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
 
+function History() {
+  const { Contract } = useContext(Web3Context);
+const { warrantyID } = useParams();
+const [data, setData] = useState("");
+const [expiry,setExpiry]=useState("");
+useEffect(() => {
+  getDetails();
+}, [Contract]);
+
+const getDetails = async () => {
+  const res = await getWarrantyDetails(Contract, warrantyID);
+  // console.log(res)
+  setData(res);
+  const date = new Date(res.expiry*1000);
+  setExpiry(date)
+};
+}
+
 
 
 const Claim = (props) => {
@@ -98,8 +116,8 @@ const Claim = (props) => {
 const ResellH = (props) => {
   return(
     <>
-      <NavLink className="resell_button" to={`/resell/${props.id}`}>Resell</NavLink>
-      <div className="history_button">History</div>
+      {/* <NavLink className="resell_button" to={`/resell/${props.id}`}>Resell</NavLink> */}
+      <div className="history_button" >History</div>
     </>
   )
 }

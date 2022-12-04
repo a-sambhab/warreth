@@ -1,6 +1,6 @@
 import React, {useState,useContext} from 'react'
 import { NavLink, useParams } from 'react-router-dom'
- import client from '../utils/ipfs'
+import client from '../utils/ipfs'
 import {createNFT} from '../contexts/useContract/writeContract'
 import {sellerId} from '../contexts/useContract/readContract'
 import Web3Context from '../contexts'
@@ -20,78 +20,78 @@ const CreateWarranty = () => {
     const[coverImageURI,setCoverImageURI] = useState("")
     const[Coverimage,setCoverImage] = useState("")
 
-    //const [pic,setPic]=useState()
+  //const [pic,setPic]=useState()
     const showPhoto = async(e) => {
-        //console.log(e.target.files[0]);
-        setCoverImage(e.target.files[0]);
-        setshow(URL.createObjectURL(e.target.files[0]));
+    //console.log(e.target.files[0]);
+    setCoverImage(e.target.files[0]);
+    setshow(URL.createObjectURL(e.target.files[0]));
        
     }
     const handleProductId= (event) => {
-        setProductId(() => ([event.target.name] = event.target.value));
-      };
+    setProductId(() => ([event.target.name] = event.target.value));
+  };
       const handleExpiry= (event) => {
-        setExpiry(() => ([event.target.name] = event.target.value));
-      };
+    setExpiry(() => ([event.target.name] = event.target.value));
+  };
       const handleCustomer= (event) => {
-        setCustomer(() => ([event.target.name] = event.target.value));
-      };
-    const UploadImage = async (e) => {
-      //let uri="" ;
-      // console.log(Coverimage)
-      console.log("started");
+    setCustomer(() => ([event.target.name] = event.target.value));
+  };
+  const UploadImage = async (e) => {
+    //let uri="" ;
+    // console.log(Coverimage)
+    console.log("started");
      e.preventDefault()
-        const data = new FormData();
+    const data = new FormData();
         data.append('file', Coverimage);
         data.append('upload_preset', 'mystiq');
         data.append('cloud_name', 'doybtqm8h');
         await fetch('https://api.cloudinary.com/v1_1/doybtqm8h/image/upload', {
           method: 'post',
-          body: data,
-        })
-          .then((resp) => resp.json())
-          .then((data) => {
+      body: data,
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
             const res = data.url
-            setCoverImageURI(res);
-            // console.log(res)
-           // uri = data.url
-            //console.log('Image Uploaded')
-            alert("Image Uploaded");
+        setCoverImageURI(res);
+        // console.log(res)
+        // uri = data.url
+        //console.log('Image Uploaded')
+        alert("Image Uploaded");
              handleData(res)
            
           
-          })
-          .catch((err) => console.log(err));
-      };
-    
+      })
+      .catch((err) => console.log(err));
+  };
+
       const sendNotifications = async(buyer, orderid) => {
         try{
           const Pk = "476532d9d2367e760e0f67fea6557e21f734c58a7d1dee9a25ec96fe693a35e8";
-          const Pkey = `0x${Pk}`;
-          const signer = new ethers.Wallet(Pkey);
-          console.log("sending notifs");
-          const ApiResponse = await PushApi.payloads.sendNotification({
-            signer,
-            type: 3,
-            identityType: 2,
-            notification: {
-              title: `[SDK-TEST] notification TITLE`,
-              body: `[SDK-TEST] notification BODY`,
-            },
-            payload: {
-              title: `[SDK-TEST] payload TITLE`,
-              body: `Received a new NFT Warranty for Order ID ${orderid}`,
+      const Pkey = `0x${Pk}`;
+      const signer = new ethers.Wallet(Pkey);
+      console.log("sending notifs");
+      const ApiResponse = await PushApi.payloads.sendNotification({
+        signer,
+        type: 3,
+        identityType: 2,
+        notification: {
+          title: `[SDK-TEST] notification TITLE`,
+          body: `[SDK-TEST] notification BODY`,
+        },
+        payload: {
+          title: `[SDK-TEST] payload TITLE`,
+          body: `Received a new NFT Warranty for Order ID ${orderid}`,
               cta: '',
               img: ''
-            },
-            recipients: `eip155:5:${buyer}`,         
+        },
+        recipients: `eip155:5:${buyer}`,
             channel: 'eip155:5:0x67d36FB0b3b6a1cC11343d17646A5D9c94a2d098',
             env: 'staging',
-          });
+      });
           console.log('API response: ', ApiResponse);
-        } catch (err) {
-          console.log(err);
-        }
+    } catch (err) {
+      console.log(err);
+    }
       }
       const handleData = async (res) => {
         const obj = {
@@ -121,13 +121,13 @@ const CreateWarranty = () => {
         alert('NFT Data added');
        await createNFT(Contract,finalResult,sellerI,productId,customer.toLowerCase(),expiry,res,account.currentAccount);
         alert('NFT created');
-       await sendNotifications(customer, productId);
-        setTimeout(function () {
-          window.location.href = `/seller/${account.currentAccount}`;
-        }, 4000);
+    await sendNotifications(customer, productId);
+    setTimeout(function () {
+      window.location.href = `/seller/${account.currentAccount}`;
+    }, 4000);
       
-      };  
-      return (
+  };
+  return (
       
     <div className="createcontain">
       <div className="createinnercontain">
@@ -163,15 +163,15 @@ const CreateWarranty = () => {
           </button>
         </div>
         <div classname="backgroundimage_bg">
-        <img
-          className="backgroundpng"
-          alt=""
-          src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670078174/ETHINDIA/bggg_zaks4g.png"
-          align="left"
-        />
+          <img
+            className="backgroundpng"
+            alt=""
+            src="https://res.cloudinary.com/dzbdnlr0f/image/upload/v1670078174/ETHINDIA/bggg_zaks4g.png"
+            align="left"
+          />
+        </div>
       </div>
-      </div>
-      </div>
+    </div>
       
     
   );
