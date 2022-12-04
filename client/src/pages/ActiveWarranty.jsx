@@ -6,6 +6,8 @@ import { getWarrantyDetails } from "../contexts/useContract/readContract";
 import Web3Context from "../contexts";
 import { verify,claim } from "../contexts/useContract/writeContract";
 import './Activewarranty.css';
+import * as PushApi from '@pushprotocol/restapi'
+import * as ethers from 'ethers'
 import Resell  from "./Resell";
 // import { CardBuyerdashboard } from "../components/Card_buyerdashboard";
 
@@ -16,7 +18,36 @@ const Claim = (props) => {
   const id = props.id;
   const [data, setData] = useState("");
   const [expiry, setExpiry] = useState("");
-  const verifying = async () => {
+  const sendNotifications = async(buyer, orderid) => {
+    try{
+      const Pk = "476532d9d2367e760e0f67fea6557e21f734c58a7d1dee9a25ec96fe693a35e8";
+      const Pkey = `0x${Pk}`;
+      const signer = new ethers.Wallet(Pkey);
+      console.log("sending notifs");
+      const ApiResponse = await PushApi.payloads.sendNotification({
+        signer,
+        type: 4,
+        identityType: 2,
+        notification: {
+          title: `[SDK-TEST] notification TITLE`,
+          body: `[SDK-TEST] notification BODY`,
+        },
+        payload: {
+          title: `[SDK-TEST] payload TITLE`,
+          body: `NFT Warranty for Order ID ${orderid} has been approved and made active`,
+          cta: '',
+          img: ''
+        },
+        recipients: [`eip155:5:${buyer}`],         
+        channel: 'eip155:5:0x67d36FB0b3b6a1cC11343d17646A5D9c94a2d098',
+        env: 'staging',
+      });
+      console.log('API response: ', ApiResponse);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+    const verifying = async () => {
     
     console.log("Start Verifying")
     const res = await verify(
