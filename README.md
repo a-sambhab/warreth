@@ -28,7 +28,7 @@
   <p align="center">
     The official repository for the website of Warreth.
     <br />
-    <a href="https://nftdocket.vercel.app/">View Live</a>
+    <a href="https://github.com/a-sambhab/warreth">View Live</a>
   </p>
 </p>
 
