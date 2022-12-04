@@ -3,60 +3,31 @@ import './Navbar.css';
 import * as PushApi from '@pushprotocol/restapi'
 import * as ethers from 'ethers';
 import Web3Context from '../contexts/index';
+import Notif from './Notif';
+import Web3 from 'web3';
+
 
 const Navbar = () => {
+  const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546');
+  const [shownotifs, setshownotifs] = useState(true);
+  setTimeout(() => {
+    setshownotifs(false);
+  }, 6000);
+  // cons/ole.log(web3);
   const {connectWallet, account, checkIfWalletIsConnected} = useContext(Web3Context);
   const Pk = "476532d9d2367e760e0f67fea6557e21f734c58a7d1dee9a25ec96fe693a35e8";
   const Pkey = `0x${Pk}`;
   const signer = new ethers.Wallet(Pkey);
-  const sendNotifications = async() => {
-    try{
-      console.log("sending notifs");
-      const ApiResponse = await PushApi.payloads.sendNotification({
-        signer,
-        type: 3,
-        identityType: 2,
-        notification: {
-          title: `[SDK-TEST] notification TITLE`,
-          body: `[SDK-TEST] notification BODY`,
-        },
-        payload: {
-          title: `[SDK-TEST] payload TITLE`,
-          body: `sample msg body`,
-          cta: '',
-          img: ''
-        },
-        recipients: 'eip155:5:0x6455b58DA58f21a7b18C9D85228DA958599843Da',
-        channel: 'eip155:5:0x67d36FB0b3b6a1cC11343d17646A5D9c94a2d098',
-        env: 'staging',
-      });
-      console.log('API response: ', ApiResponse);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  const fetchNotifs = async (acc) => {
-    const notifications = await PushApi.user.getFeeds({
-      user: `eip155:42:${acc}`, // user address in CAIP
-      env: "staging",
-    });
-  
-    console.log("Notifications: \n\n", notifications);
-  };
+  // web3.eth.ens.getOwner('warr.eth').then((owner)=>{
+  //   console.log(owner);
+  // })
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [account]);
-  // fetchNotifs(account.currentAccount);
-  // console.log(account.currentAccount)
-  // const [connected, setConnected] = useState();
   const connectwalletfunc = () => {
     console.log("connecting");
     connectWallet();
-    // sendNotifications();
-    // setConnected(true);
   }
-  // fetchNotifs();
   return (
     <div className='navcontainer'>
       <div className='navlogo'>
@@ -71,6 +42,16 @@ const Navbar = () => {
       :
         <div className='connected'>
           <img src='https://res.cloudinary.com/dgy8ybeoy/image/upload/v1670044645/Group_mr6k1t.png' className='navnotif'/>
+          {/* <Notif
+            add = {account.currentAccount}
+          /> */}
+          {shownotifs?
+          <Notif
+            add = {account.currentAccount}
+          />
+          :
+          <div></div>
+          }
           <div className='navaddress'>
             Hey, {`${String(account.currentAccount).slice(0,7)}...${String(account.currentAccount).slice(String(account.currentAccount).length-7)}`}
           </div>

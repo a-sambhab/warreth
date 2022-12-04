@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 
 import { NavLink, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { getWarrantyDetails } from "../contexts/useContract/readContract";
 import Web3Context from "../contexts";
