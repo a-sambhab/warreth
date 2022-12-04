@@ -15,7 +15,7 @@ const Navbar = () => {
   const {connectWallet, account, checkIfWalletIsConnected} = useContext(Web3Context);
   const Pk = "476532d9d2367e760e0f67fea6557e21f734c58a7d1dee9a25ec96fe693a35e8";
   const Pkey = `0x${Pk}`;
-  const signer = new ethers.Wallet(Pkey);
+  //const signer = new ethers.Wallet(Pkey);
   // web3.eth.ens.getOwner('warr.eth').then((owner)=>{
   //   console.log(owner);
   // })
