@@ -76,6 +76,10 @@ Following technologies and libraries are used for the development of this websit
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Gelato Ops](https://app.gelato.network/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Valist](https://www.valist.io)
+- [Push Protocol](https://push.org)
+- [ENS](https://ens.domains)
+
 
 ## Getting Started
 
