@@ -28,7 +28,7 @@
   <p align="center">
     The official repository for the website of Warreth.
     <br />
-    <a href="https://nftdocket.vercel.app/">View Live</a>
+    <a href="https://bafybeie3vuqqeducccyk6keasbr4byuv2aktaip4dbo252etuj4o4b6fs4.ipfs.gateway.valist.io/">View Live</a>
   </p>
 </p>
 
@@ -76,6 +76,10 @@ Following technologies and libraries are used for the development of this websit
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Gelato Ops](https://app.gelato.network/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Valist](https://www.valist.io)
+- [Push Protocol](https://push.org)
+- [ENS](https://ens.domains)
+
 
 ## Getting Started
 

@@ -1,0 +1,243 @@
+.createcontain {
+    height: 91.64vh;
+    width: 100vw;
+    background: #121129;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .createinnercontain {
+    position: absolute;
+    top: 5.5rem;
+    height: 37.625rem;
+    width: 26.938rem;
+    background: rgba(18, 17, 41);
+    /* background: black; */
+    box-shadow: 4px 4px 4px #f05fb5;
+    border-radius: 25px;
+    opacity: 0.96;
+    z-index: 5;
+  }
+  
+  .createcontain::after {
+    content: "";
+    position: absolute;
+    width: 28.188rem;
+    height: 36.375rem;
+    top: 4.563rem;
+    left: 30.063rem;
+    border-radius: 10%;
+    /* z-index: -5; */
+    background: linear-gradient(129.57deg, #ff5dab 0.87%, #756bff 100%);
+  }
+  
+  .createtext {
+    position: relative;
+    top: 1.0rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #c4c0ff;
+  }
+  
+  .createtextsmall {
+    position: relative;
+    top: 2.00rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #c4c0ff;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .createtextsmall2 {
+    position: relative;
+    top: 4rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #c4c0ff;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .createtextsmall3 {
+    position: relative;
+    top: 6rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #c4c0ff;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .createtextsmall4 {
+    position: relative;
+    top: 8rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #c4c0ff;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .textboxcreate {
+    position: relative;
+    height: 2.375rem;
+    width: 19.313rem;
+    top: 3rem;
+    left: 2.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .textbox2create {
+    position: relative;
+    height: 2.375rem;
+    width: 19.313rem;
+    top: 5rem;
+    left: 2.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .textbox3create {
+    position: relative;
+    height: 2.375rem;
+    width: 19.313rem;
+    top: 7rem;
+    left: 2.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .textbox4create {
+    position: relative;
+    height: 2.375rem;
+    width: 19.313rem;
+    top: 9rem;
+    left: 2.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .buttoncreate {
+    position: relative;
+    top: 12rem;
+    left: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+  
+    width: 21.938rem;
+    height: 2.5rem;
+  
+    background: #756bff;
+    border-radius: 4px;
+  
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .buttontextcreate {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #ffffff;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .imagewarranty {
+    position: relative;
+    top: 10rem;
+    left: 2.5rem;
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #c4c0ff;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .buttonimage {
+    position: relative;
+    top: 11rem;
+    left: 2.5rem;
+    padding: 10px 20px;
+  
+    width: 11.25rem;
+    height: 1.25rem;
+  
+    background: #756bff;
+    border-radius: 4px;
+  
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .backgroundpng{
+    position: absolute;
+    left: 0;
+    /* top:50; */
+    width: 100%;
+    overflow: hidden;
+    top: 130px;
+    /* align-items: flex-start; */
+  }
+  
+  .backgroundimage_bg{
+    width: 100%;
+  }
